@@ -1,0 +1,1 @@
+{"root":["./src/server.ts","./src/controllers/admin.ts","./src/controllers/user.ts","./src/db/db.ts","./src/middlewares/auth.ts","./src/routers/adminrouter.ts","./src/routers/index.ts","./src/routers/userrouter.ts","./src/validation/zodvalidation.ts"],"version":"5.7.2"}
