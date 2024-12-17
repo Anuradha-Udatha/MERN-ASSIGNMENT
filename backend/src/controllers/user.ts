@@ -4,7 +4,6 @@ import { UserBookingSchema } from "../validation/zodValidation";
 
 const createUser = async (req:Request,res: Response) => {
     try{
-        console.log("Raw request body:", req.body);
         const body=req.body;
         const parsedResult = UserBookingSchema.safeParse(body);
         if(!parsedResult.success){
