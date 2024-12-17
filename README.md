@@ -40,3 +40,100 @@ Make sure you have the following installed on your system:
 
 Node.js (v14 or later)
 MongoDB (if running locally) or a cloud MongoDB service like MongoDB Atlas
+
+Installation
+Prerequisites
+Make sure you have the following installed on your system:
+
+Node.js (v14 or later)
+MongoDB (if running locally) or a cloud MongoDB service like MongoDB Atlas
+
+
+Clone the repository
+git clone https://github.com/Anuradha-Udatha/MERN-ASSIGNMENT.git
+cd MERN-ASSIGNMENT
+
+Backend Setup
+Navigate to the backend/ folder:
+cd backend
+
+Install the dependencies:
+npm install
+Create a .env file to store environment variables (e.g., MongoDB connection URL).
+
+Example:
+env
+Copy code
+MONGO_URI=mongodb://localhost:27017/mern-assignment
+PORT=3000
+
+
+Start the backend server:
+npm start
+
+
+Frontend Setup
+Navigate to the frontend/ folder:
+cd frontend
+
+Install the dependencies:
+npm install
+
+Start the frontend development server:
+npm run dev
+The frontend will be accessible at http://localhost:5173.
+
+Usage
+Open your browser and go to http://localhost:5173/packages to view the list of available packages.
+Click on a package to view detailed information about it.
+Use the "Book Now" button to open the booking form and make a booking.
+
+API Endpoints
+1. GET /api/v1/packages
+Retrieves a list of all available travel packages.
+Response:
+json
+[
+  {
+    "_id": "package_id",
+    "title": "Package 1",
+    "description": "Description of Package 1",
+    "price": 1000
+  },
+  ...
+]
+2. GET /api/v1/packages/:id
+Retrieves details of a specific package by its ID.
+Request:
+GET /api/v1/packages/675e136fd1ffccb375726596
+Response:
+json
+{
+  "_id": "675e136fd1ffccb375726596",
+  "title": "Package 1",
+  "description": "Detailed description of Package 1",
+  "price": 1000,
+  "itinerary": "Sample itinerary here..."
+}
+
+3. POST /api/v1/bookings
+Submit a booking for a package.
+Request Body:
+json
+{
+  "Name": "Anuradha Udatha",
+  "Email": "udathaanuradha2313@gmail.com",
+  "PhoneNumber": "8374026569",
+  "NumberOfTravellers": 1,
+  "SpecialRequests": "None",
+  "PackageId": "675e136fd1ffccb375726596"
+}
+Response:
+json
+Copy code
+{
+  "success": true,
+  "message": "Booking successful!"
+}
+
+
